@@ -15,7 +15,7 @@ export default function () {
             <div className="topbarCenter">
                 <div className="searchbar">
                     <Search className="searchIcon"/>
-                    <input placeholder="Search for friends, posts or videos" className="searchInput" />
+                    <input placeholder="Search for Recipe" className="searchInput" />
                 </div>
             </div>
             <div className="topbarRight">
