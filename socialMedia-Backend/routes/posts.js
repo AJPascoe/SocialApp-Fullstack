@@ -38,6 +38,6 @@ router.get("/:id", async (req, res) => {
 
 //get timeline posts
 
-router.get("/timeline/all", timelinePost);
+router.get("/timeline/:userId", timelinePost);
 
 module.exports = router;
