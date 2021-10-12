@@ -1,28 +1,32 @@
 import "./login.css";
+import logo from"./hrLogo.png";
 
 export default function Login() {
-    return (
-        <div className="login">
-            <div className="loginWrapper">
-                <div className="loginLeft">
-                    <h3 className="loginLogo">CodeNation Social</h3>
-                    <span className="loginDesc">
-                        Connect With Developer around the world!
-                    </span>
-                </div>
-                <div className="loginRight">
-                    <div className="loginBox">
-                        <input placeholder="Email" className="loginInput" />
-                        <input placeholder="Password" className="loginInput" />
-                        <button className="loginButton">Login</button>
-                        <span className="loginForgot">Forgot Password?</span>
-                        <button className="loginRegisterButton">
-                            Create Account
-                        </button>
-                    </div>
-                </div>
+  return (
+    <div className="opaqueLayer">
+      <div className="loginWrapper">
+        <div className="loginBox">
+          <div className="logoBox">
+            <img className="logo" src={logo} alt="logo"></img>
+          </div>
+          <form className="loginForm" onSubmit>
+            <input className="email" type="text" placeholder="email" />
+            <input className="password" type="text" placeholder="password" />
+            <div className="loginButton">
+              <button className="loginBTN">Login</button>
             </div>
+            <div className="orBox">
+              <p className="or">or</p>
+            </div>
+            <div className="createAccBox">
+              <p className="createAccount">Don't have an Account?</p>
+            </div>
+            <div className="signupButton">
+              <button className="signupBTN">Sign Up</button>
+            </div>
+          </form>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
-

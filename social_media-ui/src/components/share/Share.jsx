@@ -7,28 +7,21 @@ export default function Share() {
             <div className="shareWrapper">
                 <div className="shareTop">
                     <img className="shareProfileImg" src="/assets/person/2.jpeg" alt="" />
-                    <input placeholder="What's on your mind?" className="shareInput"/>
+                    <input placeholder="PERSONALISE AND SHARE YOUR RECIPE" className="shareInput"/>
                 </div>
                 <hr className="shareHr"/>
                 <div className="shareBottom">
                     <div className="shareOptions">
                         <div className="shareOption">
+                            
                             <PermMedia htmlColor="tomato" className="shareIcon"/>
                             <span className="shareOptionText">Media </span>
                         </div>
-                        <div className="shareOption">
-                            <Label htmlColor="blue" className="shareIcon"/>
-                            <span className="shareOptionText">Tag</span>
-                        </div>
-                        <div className="shareOption">
-                            <Room htmlColor="green" className="shareIcon"/>
-                            <span className="shareOptionText">Location </span>
-                        </div>
-                        <div className="shareOption">
-                            <EmojiEmotions htmlColor="goldenrod" className="shareIcon"/>
-                            <span className="shareOptionText">Mood </span>
-                        </div>
+                        
                     </div>
+                    <div className="heading">
+                            <h3 className="title">What are your favourite cuisines?</h3>
+                        </div>
                     <button className="shareButton">Share</button>
                 </div>
             </div>
