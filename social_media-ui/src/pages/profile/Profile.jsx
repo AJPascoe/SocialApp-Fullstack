@@ -1,8 +1,11 @@
 import "./profile.css";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Rightbar from "../../components/rightbar/Rightbar";
 import Feed from "../../components/feed/Feed";
+import Rightbar from "../../components/rightbar/Rightbar";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router";
 
 export default function Profile() {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -10,7 +13,7 @@ export default function Profile() {
         <>
         <Topbar/>
         <div className="profile">
-           <Sidebar/>
+
            <div className="profileRight">
                <div className="profileRightTop">
                    <div className="profileCover">
@@ -26,11 +29,11 @@ export default function Profile() {
                </div>
                <div className="profileRightBottom">
                  <Feed username = "adeel"/>
-                 <Rightbar profile/>  
+           
                </div>
            </div>
         </div>
-       
-        </>
-    )
+    
+    </>
+  );
 }

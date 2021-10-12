@@ -9,7 +9,13 @@
   .shareWrapper {
     padding: 10px;
   }
-  
+
+
+  .text{
+    font-weight: 500;
+  }
+
+
   .shareTop {
     display: flex;
     align-items: center;
@@ -26,6 +32,7 @@
   .shareInput {
     border: none;
     width: 80%;
+   
   }
   
   .shareInput:focus {
