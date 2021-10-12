@@ -5,6 +5,8 @@ const {
   delPost,
   likePost,
   timelinePost,
+  allPost,
+  userPost,
 } = require("../controlers/post");
 const Post = require("../models/Post");
 const User = require("../models/User");
@@ -27,17 +29,13 @@ router.put("/:id/like", likePost);
 
 //get a post
 
-router.get("/:id", async (req, res) => {
-  try {
-    const post = await Post.findById(req.params.id);
-    res.status(200).json(post);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+router.get("/:id", userPost );
 
 //get timeline posts
 
 router.get("/timeline/:userId", timelinePost);
+
+//gets all post
+router.get("/profile/:username", allPost)
 
 module.exports = router;

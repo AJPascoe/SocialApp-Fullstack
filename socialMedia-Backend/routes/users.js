@@ -5,6 +5,7 @@ const {
   getUser,
   followUser,
   unfollowUser,
+  getFriend,
 } = require("../controlers/user");
 const User = require("../models/User");
 
@@ -24,5 +25,9 @@ router.put("/:id/follow", followUser);
 
 //unfollow a user
 router.put("/:id/unfollow", unfollowUser);
+
+
+//gets friends
+router.get("friends/:userId", getFriend);
 
 module.exports = router;
