@@ -47,7 +47,8 @@ function App() {
           <Register/>
         </Route>
         <Route path ="/">
-          <Home/>
+          <Home 
+            user={user}/>
         </Route>
         <Route path ="/profile/:username">
           <Profile/>

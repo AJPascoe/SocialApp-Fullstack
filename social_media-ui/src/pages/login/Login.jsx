@@ -43,7 +43,7 @@ const Login = ({ email, password, user, setEmail, setPassword, setUser }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit" className="signupBTN">Login</button>
+      <button  type="submit" className="signupBTN">Login</button>
       <h1>{user ? `Logged in as ${user}` : "Wrong Details"}</h1>
     </form>
         </div>

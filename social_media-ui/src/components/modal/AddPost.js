@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 
 
-function AddPost({}) {
+function AddPost({user}) {
 
 
     const fetchRequest = async (desc) => {
@@ -17,7 +17,7 @@ function AddPost({}) {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
-                    userId: "6160271af0b7f180f5998e4f",
+                    userId: user._id,
                     desc: desc
                 }),
             });
