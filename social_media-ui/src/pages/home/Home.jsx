@@ -1,16 +1,15 @@
 import Topbar from "../../components/topbar/Topbar";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Rightbar from "../../components/rightbar/Rightbar";
 import Feed from "../../components/feed/Feed";
 import "./home.css";
 
-export default function Home() {
+export default function Home({user}) {
   return (
     <>
       <Topbar />
       <div className="backg">
         <div className="homeContainer">
-          <Feed />
+          <Feed 
+            user={user}/>
         </div>
       </div>
     </>

@@ -11,8 +11,9 @@ export const LoginRequest = async (email, password, setter) => {
       });
   
       const data = await response.json();
-      setter(data.username);
+      setter(data);
       console.log(data.username);
+      console.log(setter);
     } catch (error) {
       console.log(error);
     }
