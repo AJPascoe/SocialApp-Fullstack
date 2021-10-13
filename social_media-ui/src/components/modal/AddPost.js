@@ -1,0 +1,56 @@
+import {Form, Button} from "react-bootstrap";
+import React, { useState } from "react";
+
+
+
+//fetch request-handler
+// anonm fution that takes e, (onchange)
+
+
+
+function AddPost({}) {
+
+
+    const fetchRequest = async (desc) => {
+        try {
+            const response = await fetch("http://localhost:8800/api/posts/", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    userId: "6160271af0b7f180f5998e4f",
+                    desc: desc
+                }),
+            });
+            console.log(response)
+        } catch (error) {
+            console.log(error)
+            
+        }
+    }
+    const [desc, setDesc]= useState();
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        fetchRequest( desc );
+        //call fetch request for creating post
+      }
+    return (
+        <form onSubmit={submitHandler}>
+            <Form.Group>
+                <Form.Control
+                    type="text"
+                    placeholder=" Desc *"
+                    required
+                    onChange={(e)=> setDesc(e.target.value)}
+                    
+                />
+            </Form.Group>
+
+            <Button variant="success" type="submit" block="true" >
+                Add Post
+            </Button>
+        </form>
+    )
+}
+
+export default AddPost

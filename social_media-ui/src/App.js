@@ -9,6 +9,14 @@ import {
   
 } from "react-router-dom";
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import react and use state
+// create usestate which is a bollean to be used in home and profile page.
+
+
+
+
 function App() {
   return  (
     <Router>

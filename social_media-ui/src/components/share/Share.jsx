@@ -1,7 +1,17 @@
 import "./share.css";
 import {PermMedia, Label, Room, EmojiEmotions} from "@material-ui/icons";
+import { Modal, Button } from "react-bootstrap";
+import AddPost from "../modal/AddPost";
+import { useContext, useState } from "react";
 
 export default function Share() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+   
+  
     return (
         <div className="share">
             <div className="shareWrapper">
@@ -22,7 +32,23 @@ export default function Share() {
                     <div className="heading">
                             <h3 className="title">What are your favourite cuisines?</h3>
                         </div>
-                    <button className="shareButton">Share</button>
+                    <button className="shareButton" onClick={handleShow}>Create Post</button>
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>
+                                Add Recipe
+                            </Modal.Title>
+
+                        </Modal.Header>
+                        <Modal.Body>
+                            <AddPost/>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close Button
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
             </div>
         </div>
