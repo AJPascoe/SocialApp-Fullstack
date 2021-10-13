@@ -2,7 +2,7 @@ import "./share.css";
 import {PermMedia, Label, Room, EmojiEmotions} from "@material-ui/icons";
 import { Modal, Button } from "react-bootstrap";
 import AddPost from "../modal/AddPost";
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 export default function Share() {
     const [show, setShow] = useState(false);
