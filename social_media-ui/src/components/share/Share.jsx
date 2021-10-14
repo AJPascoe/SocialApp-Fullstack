@@ -6,17 +6,17 @@ export default function Share() {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    <img className="shareProfileImg" src="/assets/person/2.jpeg" alt="" />
-                    <input placeholder="PERSONALISE AND SHARE YOUR RECIPE" className="shareInput"/>
+                    {/* <img className="shareProfileImg" src="/assets/person/2.jpeg" alt="" /> */}
+                    {/* <input placeholder="personalise and share your recipe here" className="shareInput"/> */}
                 </div>
-                <hr className="shareHr"/>
+                {/* <hr className="shareHr"/> */}
                 <div className="shareBottom">
                     <div className="shareOptions">
-                        <div className="shareOption">
+                        {/* <div className="shareOption">
                             
                             <PermMedia htmlColor="tomato" className="shareIcon"/>
                             <span className="shareOptionText">Media </span>
-                        </div>
+                        </div> */}
                         
                     </div>
                     <div className="heading">

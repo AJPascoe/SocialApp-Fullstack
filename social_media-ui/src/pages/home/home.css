@@ -1,9 +1,9 @@
 .homeContainer{
     display: flex;
     width: 100%;
-    
+    /* border: 3px solid #b2dacf; */
 }
 
 .backg{
-    background-color:  rgb(226, 238, 208);
+    background-color: #f3faf8;
 }
