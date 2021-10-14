@@ -4,7 +4,7 @@ import Share from "../share/Share";
 import "./feed.css";
 import axios from "axios";
 
-export default function Feed({user}) {
+export default function Feed({user, refresh, setRefresh}) {
 
     const [posts, setPosts] = useState([]);
     
@@ -18,16 +18,21 @@ export default function Feed({user}) {
             setPosts(res.data)
         }
         fetchPosts();
-    },[user]);
+    },[user, refresh]);
     return (
         <div className="feed">
             <div className="feedWrapper">
                 <Share 
+                 refresh={refresh}
+                 setRefresh={setRefresh}
                 user={user}/>
+                <div className="feedPost">
                 {posts.map ((p)=>(
                 <Post key={p._id} post ={p}/>    
                 ))}
                 
+                </div>
+               
 
             </div>
         </div>

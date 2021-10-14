@@ -4,7 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 import AddPost from "../modal/AddPost";
 import { useState } from "react";
 
-export default function Share({user}) {
+export default function Share({user, refresh, setRefresh}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -42,6 +42,8 @@ export default function Share({user}) {
                         </Modal.Header>
                         <Modal.Body>
                             <AddPost
+                            refresh={refresh}
+                            setRefresh={setRefresh}
                             user={user}/>
                         </Modal.Body>
                         <Modal.Footer>

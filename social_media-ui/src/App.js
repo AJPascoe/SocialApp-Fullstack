@@ -3,7 +3,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +26,18 @@ function App() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [refresh, setRefresh] = useState(false);
+
+  
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
+
   return  (
     <Router>
       <Switch>
@@ -48,7 +60,10 @@ function App() {
         </Route>
         <Route path ="/">
           <Home 
-            user={user}/>
+            user={user}
+            refresh={refresh}
+            setRefresh={setRefresh}
+            />
         </Route>
         <Route path ="/profile/:username">
           <Profile/>
