@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 
 
-function AddPost({user}) {
+function AddPost({user, refresh, setRefresh}) {
 
 
     const fetchRequest = async (desc) => {
@@ -32,6 +32,7 @@ function AddPost({user}) {
     const submitHandler = (e) => {
         e.preventDefault();
         fetchRequest( desc );
+        setRefresh(!refresh)
         //call fetch request for creating post
       }
     return (

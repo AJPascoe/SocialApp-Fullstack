@@ -4,5 +4,10 @@
 
 .feedWrapper{
     padding: 20px;
-    
 }
+
+.feedPost{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
