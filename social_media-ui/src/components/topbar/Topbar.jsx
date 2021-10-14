@@ -15,9 +15,12 @@ export default function () {
                 </span>
                 </Link>
             </div>
-            <div className="topbarCenter">
+            <div className="topbarCenter">happea recipea
+                {/* <img src="/assets/hrLogo.png" alt="" /> */}
+                </div>
+            {/* <div className="topbarCenter">
                 <img src="/assets/hrLogo.png" alt="" />
-            </div>
+            </div> */}
             <div className="topbarRight">
                
                 </div>
