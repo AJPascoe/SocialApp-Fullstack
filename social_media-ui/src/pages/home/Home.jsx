@@ -5,7 +5,7 @@ import "./home.css";
 export default function Home({user, refresh, setRefresh}) {
   return (
     <>
-      <Topbar />
+      <Topbar  className="topbar"/>
       <div className="backg">
         <div className="homeContainer">
           <Feed 

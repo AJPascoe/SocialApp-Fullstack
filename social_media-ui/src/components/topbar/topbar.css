@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 .topbarContainer{
     height: 90px;
     width: 100%;
-    background-color: rgb(226, 238, 208);
+    /* background-color: rgb(226, 238, 208); */
     display: flex;
     align-items: center;
     position: sticky;
@@ -22,20 +25,26 @@
     cursor: pointer
 }
 .p1{
-    width: 100px;
-    height: 70px;
+    width: 80px;
+    height: 60px;
 }
  .p2{
-    width: 70px;
-    height: 70px;
+    width: 57px;
+    height: 58px;
+    position: relative;
+    bottom: 1px;
 }
 .topbarCenter{
-    flex: 5;
+    font-weight: 700;
+    font-family: 'Caveat';
+    font-size: 50px;
+    color: #b2dacf;
+    flex: -3;
 }
 
 
 .topbarRight{
-    flex: 4;
+    flex: 2.5;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -59,11 +68,13 @@
 }
 
 .topbarImg{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50% 50% 50%;
+    border: 4px solid #b2dacf;
     object-fit: cover;
     cursor: pointer;
+    padding-right: 1px;
 }
 
 .topbarIconBadge{

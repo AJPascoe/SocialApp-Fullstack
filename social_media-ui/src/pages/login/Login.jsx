@@ -26,7 +26,7 @@ const Login = ({ email, password, user, setEmail, setPassword, setUser }) => {
       <div className="loginWrapper">
         <div className="loginBox">
           <div className="logoBox">
-            <img className="logo" src={logo} alt="logo"></img>
+           <h1 className="logo">happea recipea</h1>
           </div>
           <form onSubmit={submitHandler} className="inputBlock">
       <input
@@ -44,7 +44,7 @@ const Login = ({ email, password, user, setEmail, setPassword, setUser }) => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button  type="submit" className="signupBTN">Login</button>
-      <h1>{user ? `Logged in as ${user}` : "Wrong Details"}</h1>
+    
     </form>
         </div>
       </div>
